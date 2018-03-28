@@ -1,0 +1,68 @@
+{
+	"TS Config": {
+		"scope": "jsonc",
+		"prefix": "tsconfig",
+		"body": "{\n    \"compilerOptions\": {\n      \"outDir\": \"./dist/\",\n      \"sourceMap\": true,\n      \"noImplicitAny\": true,\n      \"allowUnreachableCode\": false,\n      \"alwaysStrict\": true,\n      \"strictNullChecks\": true,\n      \"noUnusedParameters\": true,\n      \"noImplicitReturns\": true,\n      \"module\": \"commonjs\",\n      \"target\": \"es5\",\n      \"moduleResolution\": \"node\",\n      \"emitDecoratorMetadata\": true,\n      \"experimentalDecorators\": true,\n      \"lib\": [\n        \"es2015\",\n        \"dom\"\n      ],\n      \"jsx\": \"react\",\n      \"suppressImplicitAnyIndexErrors\": true,\n      \"allowSyntheticDefaultImports\": true\n    },\n    \"include\": [\n      \"./src/**/*\"\n    ],\n    \"exclude\": [\n      \"node_modules\"\n    ]\n  }",
+		"description": "Represents a full TS Config for the demo"
+	},
+	"Editorconfig": {
+		"scope": "",
+		"prefix": "editorconfig",
+		"body": "root = true\n\n[*]\nindent_style = space\nindent_size = 2\ncharset = utf-8\ntrim_trailing_whitespace = true\ninsert_final_newline = true\nend_of_line = lf\nmax_line_length = null",
+		"description": "Represents a full Editorconfig for the demo"
+	},
+	"Webpack 4 Basic": {
+		"scope": "javascript",
+		"prefix": "wpbasic",
+		"body": "module.exports = {\n  entry: [\n    './src/app.ts',\n  ],\n  output: {\n    path: __dirname + '/dist',\n    publicPath: '/',\n    filename: 'bundle.js',\n  },\n  devServer: {\n    contentBase: './dist',\n  },\n};\n",
+		"description": "Represents a basic configuration for Webpack"
+	},
+	"Webpack 4 Extensions": {
+		"scope": "javascript",
+		"prefix": "extensions",
+		"body": "  resolve: {\n    extensions: ['.ts', '.tsx', '.js', '.json'],\n  },",
+		"description": "Represents the extensions to add for Webpack"
+	},
+	"Webpack 4 Rules": {
+		"scope": "javascript",
+		"prefix": "rules",
+		"body": "  module: {\n    rules: [],\n  },",
+		"description": "Represents the rules to add for Webpack"
+	},
+	"TS Loader": {
+		"scope": "javascript",
+		"prefix": "tsloader",
+		"body": "      {\n        test: /.tsx?$/,\n        loader: 'ts-loader',\n      },",
+		"description": "Represents a rule for the Awesome TS Loader"
+	},
+	"SourceMap Loader": {
+		"scope": "javascript",
+		"prefix": "sm",
+		"body": "      {\n        enforce: 'pre',\n        test: /.js$/,\n        loader: 'source-map-loader',\n      },",
+		"description": "Represents a rule for the SourceMap Loader"
+	},
+	"Script Section": {
+		"scope": "jsonc",
+		"prefix": "scripts",
+		"body": "  \"scripts\": {\n    \"start\": \"webpack-dev-server --config ./webpack.config.js --mode development\",\n    \"build\": \"webpack --mode production\",\n    \"test\": \"jest\"\n  },",
+		"description": "Represents a sound script section for the package.json"
+	},
+	"Jest Config": {
+		"scope": "javascript",
+		"prefix": "jest",
+		"body": "module.exports = {\n    setupFiles: [],\n    transform: {\n      '^.+\\.(ts|tsx?)$': './node_modules/ts-jest/preprocessor.js',\n    },\n    testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',\n    moduleFileExtensions: [\n      'ts',\n      'tsx',\n      'js',\n      'jsx',\n      'json',\n    ],\n};",
+		"description": "Represents a minimal Jest configuration"
+	},
+	"Prettier Config": {
+		"scope": "javascript",
+		"prefix": "prettier",
+		"body": "module.exports = {\n  printWidth: 120,\n  singleQuote: true,\n  trailingComma: 'all',\n  bracketSpacing: true,\n  parser: 'typescript',\n  semi: true,\n  jsxBracketSameLine: true,\n};\n",
+		"description": "Represents a sound Prettier configuration"
+	},
+	"TSLint Config": {
+		"scope": "jsonc",
+		"prefix": "tslint",
+		"body": "{\n  \"extends\": [\n    \"tslint-config-prettier\"\n  ],\n  \"rulesDirectory\": [\n    \"tslint-plugin-prettier\"\n  ],\n  \"rules\": {\n    \"prettier\": true,\n    \"no-var-requires\": false,\n    \"prefer-for-of\": true,\n    \"curly\": [\n      true,\n      \"ignore-same-line\"\n    ],\n    \"no-duplicate-variable\": true,\n    \"no-null-keyword\": true,\n    \"no-string-literal\": true,\n    \"no-var-keyword\": true,\n    \"radix\": true,\n    \"triple-equals\": [\n      true,\n      \"allow-undefined-check\"\n    ],\n    \"arrow-return-shorthand\": true,\n    \"no-consecutive-blank-lines\": true,\n    \"one-variable-per-declaration\": [\n      true,\n      \"ignore-for-loop\"\n    ],\n    \"indent\": [\n      true,\n      \"spaces\",\n      2\n    ],\n    \"no-eval\": true,\n    \"prefer-const\": true\n  }\n}\n",
+		"description": "Represents our standard TSLint configuration"
+	}
+}
